@@ -1,0 +1,108 @@
+.container {
+	position: relative;
+	background-color: white;
+	min-height: 100vh;
+	overflow-x: hidden;
+	z-index: 2;
+}
+
+.largeBg {
+	background-image: url("https://game-sport.s3-ap-east-1.amazonaws.com/static/sports/images/agent/productBg.webp");
+	background-size: cover;
+	border: 1px solid transparent;
+}
+
+.topTitle {
+	height: 386px;
+	width: 1074px;
+	margin: 50px auto 0;
+}
+
+.cardContent {
+	position: relative;
+	width: 1546px;
+	margin: 0 auto;
+	.maskBg {
+		position: absolute;
+		left: 50%;
+		top: -100px;
+		transform: translateX(-50%);
+		width: 1546px;
+		z-index: -1;
+	}
+}
+
+.cardWrap {
+	width: 1120px;
+	margin: 30px auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	.card {
+		width: 350px;
+		height: 460px;
+	}
+}
+
+.title {
+	margin: 50px auto 0;
+	font-family: Montserrat;
+	font-weight: 800;
+	font-size: 40px;
+	line-height: 53.06px;
+	letter-spacing: 0px;
+	text-align: center;
+	background: transparent;
+	background: linear-gradient(180deg, #00c3ff 21.67%, #347df4 61.67%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-shadow: 0px 2px 3px 0px #0066ff75;
+}
+
+.littleCardWrap {
+	width: 1290px;
+	margin: 30px auto 0;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.bottomImg {
+	width: 1290px;
+	height: 296px;
+	margin: 30px auto 20px;
+}
+
+.cardContentThird {
+	margin-top: 100px;
+}
+
+.swiperSecond {
+	position: relative;
+	height: 700px;
+	width: 1520px;
+	margin: 30px auto 0;
+
+	.maskBg {
+		position: absolute;
+		left: 50%;
+		top: -100px;
+		transform: translateX(-50%);
+		width: 1546px;
+		z-index: -1;
+	}
+
+	.maskBottom {
+		position: absolute;
+		left: 50%;
+		bottom: -100px;
+		transform: translateX(-50%);
+		width: 1546px;
+		z-index: -1;
+	}
+
+	:global(.swiper-slide) {
+		width: 100%;
+	}
+}

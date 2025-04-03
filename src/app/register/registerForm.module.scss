@@ -1,0 +1,236 @@
+.formGroup {
+  padding-bottom: 35px;
+  position: relative;
+
+  .errorTip {
+    position: absolute;
+    margin-left: 170px;
+    margin-top: 8px;
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 16px;
+    color: #d40000;
+  }
+}
+
+.labelBox {
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 20px;
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19.5px;
+  letter-spacing: 0%;
+  text-align: right;
+  color: #6c7aab;
+}
+
+.iconImg {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+
+.requiredCheck {
+  width: 19px;
+  height: 19px;
+}
+
+.inputBox {
+  width: 426px;
+  height: 48px;
+  font-size: 16px;
+  border-radius: 15px;
+  padding-left: 21px;
+  padding-right: 21px;
+  background: #ffffff;
+  box-shadow: 0px 3px 20px 0px #0066ff40;
+  color: #5a5a5a;
+
+  &::placeholder {
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19.5px;
+    letter-spacing: 0%;
+    color: #5a5a5a73;
+    width: 100%;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.textareaBox {
+  width: 426px;
+  height: 156px;
+  font-size: 16px;
+  border-radius: 15px;
+  padding-left: 21px;
+  padding-right: 21px;
+  padding-top: 10px;
+  background: #ffffff;
+  box-shadow: 0px 3px 20px 0px #0066ff40;
+  color: #5a5a5a;
+  resize: none;
+
+  &::placeholder {
+    padding-top: 3px;
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19.5px;
+    letter-spacing: 0%;
+    color: #5a5a5a73;
+    width: 100%;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.verifyCodeBox {
+  position: relative;
+
+  .captcha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    width: 116px;
+    height: 32px;
+    cursor: pointer;
+    z-index: 10;
+  }
+}
+
+.passwordBox {
+  position: relative;
+
+  .passwordIcon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 10;
+  }
+}
+
+.button {
+  margin-top: 10px;
+  margin-left: 180px;
+  color: #afafaf;
+  background: linear-gradient(180deg, #5de1ff 0%, #3075f2 100%);
+  width: 200px;
+  height: 53px;
+  color: white;
+
+  font-family: Montserrat;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21.94px;
+  letter-spacing: 0%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.tips {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #6c7aab;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  .requiredCheck {
+    margin-right: 10px;
+  }
+  .checkbox {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+  }
+}
+
+.blueTip {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: 0%;
+  color: #35c0ff;
+  cursor: pointer;
+}
+
+.modal {
+  width: var(--width1);
+  background-color: transparent;
+  box-shadow: unset;
+}
+
+.modalBody {
+  position: relative;
+  padding: 8px;
+  background-color: transparent;
+  .closeIcon {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 34px;
+    height: 34px;
+    cursor: pointer;
+  }
+}
+
+.tipWrap {
+  width: var(--width2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  background-color: white;
+  padding: 20px 20px;
+  
+  .tipImg {
+    width: 50px;
+    height: 50px;
+  }
+  .modelTipTitle1 {
+    font-family: Montserrat;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    color: #4098d8;
+    margin-top: 25px;
+  }
+
+  .modelTipTitle2 {
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #5a5a5a;
+    margin-top: 25px;
+  }
+}

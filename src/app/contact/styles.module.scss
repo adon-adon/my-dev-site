@@ -1,0 +1,132 @@
+.container {
+  position: relative;
+  background-color: white;
+  min-height: 100vh;
+  overflow-x: hidden;
+  z-index: 2;
+}
+
+.formWrap {
+  width: 1298px;
+  height: 680px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 50px auto;
+
+  .formBoxLeft {
+    width: 810px;
+    height: 680px;
+    box-shadow: 0px 0px 8px 0px #0066ff59;
+    background: #ffffff;
+    border-radius: 12px;
+    padding-right: 40px;
+    padding-top: 40px;
+  }
+
+  .formBoxRight {
+    width: 440px;
+    height: 560px;
+    box-shadow: 0px 0px 8px 0px #0066ff59;
+    border-radius: 12px;
+  }
+}
+
+.formItem {
+  display: flex;
+  margin: 0 20px 20px;
+  .boxLabel {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 244px;
+    margin-right: 20px;
+    .labelTitle {
+      font-family: Montserrat;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 19.5px;
+      letter-spacing: 0%;
+      text-align: right;
+      color: #6c7aab;
+    }
+  }
+
+  .inputWrap {
+    flex: 1;
+    height: 48px;
+    padding-right: 22px;
+    padding-left: 22px;
+    margin-top: 15px;
+    background: linear-gradient(180deg, #fff 0%, rgb(255 255 255 / 0%) 100%);
+    border-radius: 15px;
+    box-shadow: 0 3px 20px 0 #0066ff40;
+    &.inputWrapTextArea {
+      padding-top: 10px;
+      width: 100%;
+      height: 156px;
+    }
+  }
+
+  .errorMsg {
+    margin-top: 10px;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29.26px;
+    letter-spacing: 0%;
+    color: #d40000;
+  }
+}
+
+.requiredCheckImg {
+  width: 19px;
+  height: 19px;
+}
+
+.submitBtn {
+  margin: 50px auto;
+  width: 200px;
+  height: auto;
+}
+
+.contactBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 50px;
+
+  .contactText {
+    font-family: Montserrat;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 34.13px;
+    letter-spacing: 0%;
+    color: #4098d8;
+    margin: 20px;
+  }
+
+  .contactItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 20px;
+    .contactImg {
+      width: 56px;
+      height: 56px;
+      margin-bottom: 20px;
+    }
+
+    .contactItemContent {
+      font-family: Montserrat;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 21.94px;
+      letter-spacing: 0%;
+      text-align: center;
+      color: #6c7aab;
+    }
+  }
+}

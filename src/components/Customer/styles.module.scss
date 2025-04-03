@@ -1,0 +1,146 @@
+.container {
+  position: fixed;
+  top: var(--top);
+  right: 0;
+  z-index: 999;
+  .contactList {
+    opacity: 1;
+    position: relative;
+    left: 3px;
+    transition: all 500ms;
+    .item {
+      position: relative;
+      cursor: pointer;
+      top: calc(var(--itemtop) * 1px);
+      opacity: var(--op);
+      transition: all 200ms ease;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .bg {
+        position: absolute;
+        width: 54px;
+        height: 54px;
+        border-radius: 54px;
+        top: 8px;
+        left: 4px;
+        z-index: 1;
+        transform: rotate(var(--deg));
+        transition: all 200ms;
+      }
+      .imgCon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 10;
+        width: 54px;
+        height: 54px;
+        border-radius: 54px;
+        margin-right: 8px;
+      }
+      .icon {
+        position: relative;
+        z-index: 1;
+        width: 30px;
+        height: 30px;
+      }
+      .content {
+        position: absolute;
+        top: 8px;
+        right: 15px;
+        width: 48px;
+        height: 53px;
+        border-radius: 54px;
+        box-shadow: 0 4px 4px 0 #0066ff40;
+        background-color: #ffffff;
+        font-family: Montserrat;
+        font-size: 20px;
+        font-weight: 700;
+        color: #4098d8;
+        text-transform: uppercase;
+        transition: all 200ms;
+        transform-origin: right center;
+        .txt {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: inherit;
+          width: calc(100% - 30px);
+          text-align: center;
+          opacity: 0;
+          padding-right: 10px;
+          transform: scaleX(1);
+        }
+      }
+    }
+    .active {
+      width: 206px !important;
+      .txt {
+        opacity: 1 !important;
+      }
+    }
+  }
+  .close {
+    opacity: 0;
+    transform: translateX(100px);
+    transform-origin: bottom center;
+  }
+  .toggleArea {
+    position: relative;
+    cursor: pointer;
+    background-color: transparent;
+    .customBar {
+      width: 70px;
+      height: 219px;
+      position: absolute;
+      bottom: 65px;
+      opacity: var(--iop);
+      transition: all 200ms;
+    }
+    .toggleCon {
+      width: 70px;
+      height: 70px;
+      cursor: pointer;
+    }
+    .toggle {
+      position: absolute;
+      top: 46%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      width: 54px;
+      height: 54px;
+    }
+  }
+}
+.popoverTitle {
+  position: relative;
+
+  .toggleTips {
+    position: absolute;
+    padding: 4px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    .arrowIcon {
+      position: absolute;
+      right: -8px;
+      top: 7px;
+      z-index: -1;
+    }
+    top: 20px;
+    right: 75px;
+    height: 28px;
+    line-height: 20px;
+    background: white;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 19px;
+    color: #5a5a5a;
+  }
+}
+
+.codeModal {
+  position: relative;
+}

@@ -1,0 +1,163 @@
+.formGroup {
+  margin-bottom: 25px;
+}
+
+.labelBox {
+  width: 270px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 20px;
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19.5px;
+  letter-spacing: 0%;
+  text-align: right;
+  color: #6c7aab;
+}
+
+.inputBox {
+  width: 426px;
+  height: 48px;
+  font-size: 16px;
+  border-radius: 15px;
+  padding-left: 21px;
+  padding-right: 21px;
+  background: #ffffff;
+  box-shadow: 0px 3px 20px 0px #0066ff40;
+  color: #5a5a5a;
+
+  &::placeholder {
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19.5px;
+    letter-spacing: 0%;
+    color: #5a5a5a73;
+    width: 100%;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.textareaBox {
+  width: 426px;
+  height: 156px;
+  font-size: 16px;
+  border-radius: 15px;
+  padding-left: 21px;
+  padding-right: 21px;
+  padding-top: 10px;
+  background: #ffffff;
+  box-shadow: 0px 3px 20px 0px #0066ff40;
+  color: #5a5a5a;
+  resize: none;
+
+  &::placeholder {
+    padding-top: 3px;
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19.5px;
+    letter-spacing: 0%;
+    color: #5a5a5a73;
+    width: 100%;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.errorTip {
+  margin-top: 10px;
+  margin-left: 290px;
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19.5px;
+  color: #d40000;
+}
+
+.requiredCheck {
+  width: 19px;
+  height: 19px;
+  margin-left: 5px;
+}
+
+.button {
+  margin-top: 10px;
+  margin-left: 440px;
+  color: white;
+  background: linear-gradient(180deg, #5de1ff 0%, #3075f2 100%);
+  width: 200px;
+  height: 53px;
+  cursor: pointer;
+  font-family: Montserrat;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21.94px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.buttonDisabled {
+  margin-top: 10px;
+  margin-left: 440px;
+  color: #afafaf;
+  pointer-events: none;
+  cursor: not-allowed;
+  background: linear-gradient(180deg, #fefeff 0%, #c1dcff 108.4%);
+  width: 200px;
+  height: 53px;
+
+  font-family: Montserrat;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21.94px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+
+.modal {
+  width: 364px;
+  background-color: transparent;
+  box-shadow: unset;
+}
+
+.modalBody {
+  position: relative;
+  padding: 8px;
+  background-color: transparent;
+}
+
+.tipWrap {
+  width: 344px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  background-color: white;
+  padding: 20px 20px;
+  
+  .tipImg {
+    width: 50px;
+    height: 50px;
+  }
+
+  .modelTipTitle {
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #5a5a5a;
+    margin-top: 25px;
+  }
+}

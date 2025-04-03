@@ -1,0 +1,153 @@
+.container {
+	position: relative;
+	background-color: white;
+	min-height: 100vh;
+	overflow-x: hidden;
+	z-index: 2;
+}
+
+.listWrap {
+	background-image: url("https://game-sport.s3-ap-east-1.amazonaws.com/static/sports/images/agent/productBg.jpg");
+	background-size: cover;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.list {
+	width: 1440px;
+}
+
+.card {
+	width: 1440px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 40px;
+}
+
+.cardCover {
+	width: 645px;
+	height: 758px;
+}
+
+.cardContent {
+	flex: 1;
+	padding-left: 50px;
+	.cardTitle {
+		width: calc(var(--width) * 1px);
+    height: calc(var(--height) * 1px);
+
+		&.cardTitle1 {
+			width: 492px;
+			height: 180px;
+		}
+		&.cardTitle2 {
+			width: 258px;
+			height: 143px;
+		}
+		&.cardTitle3 {
+			width: 317px;
+			height: 129px;
+		}
+		&.cardTitle4 {
+			width: 455px;
+			height: 111px;
+		}
+		&.cardTitle5 {
+			width: 572px;
+			height: 143px;
+		}
+		&.cardTitle6 {
+			width: 341px;
+			height: 146px;
+		}
+		&.cardTitle7 {
+			width: 417px;
+			height: 114px;
+		}
+	}
+
+	.cardText {
+		font-family: Montserrat;
+		font-weight: 400;
+		font-size: 22px;
+		line-height: 33px;
+		letter-spacing: 0%;
+		color: #5a5a5a;
+	}
+
+	.cardTip {
+		font-family: Montserrat;
+		font-weight: 700;
+		font-size: 30px;
+		line-height: 36.57px;
+		letter-spacing: 0%;
+		color: #4098d8;
+		margin-top: 30px;
+	}
+
+	.cardIcons {
+		margin-top: 20px;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.iconItem {
+		margin-right: 30px;
+		margin-bottom: 10px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		.gameIconWrap {
+			cursor: pointer;
+			width: 75px;
+			height: 75px;
+			border-radius: 17px;
+			border: 1px solid #ffffff;
+			background: linear-gradient(180deg, #fdfeff 0%, #e6f0ff 100%);
+			position: relative;
+
+			.gameIcon {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 45px;
+				height: 45px;
+				&.gameIconBlue {
+					display: block;
+				}
+				&.gameIconWhite {
+					display: none;
+				}
+			}
+
+			&:hover {
+				background: linear-gradient(180deg, #fff, #fff0), #2f71f2;
+				background-blend-mode: overlay, normal;
+
+				.gameIcon {
+					&.gameIconBlue {
+						display: none;
+					}
+					&.gameIconWhite {
+						display: block;
+					}
+				}
+			}
+		}
+
+		.gameIconText {
+			font-family: Montserrat;
+			font-weight: 800;
+			font-size: 18px;
+			line-height: 21.94px;
+			letter-spacing: 0%;
+			text-align: center;
+			color: #6c7aab;
+			margin-top: 10px;
+		}
+	}
+}

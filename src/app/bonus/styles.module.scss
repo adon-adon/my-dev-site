@@ -1,0 +1,270 @@
+.container {
+	position: relative;
+	background-color: white;
+	min-height: 100vh;
+	overflow-x: hidden;
+	z-index: 2;
+}
+
+.largeBg {
+	background-image: url("https://game-sport.s3-ap-east-1.amazonaws.com/static/sports/images/agent/productBg.webp");
+	background-size: cover;
+	border: 1px solid transparent;
+}
+
+.tableWrap {
+	margin: 18px auto;
+	width: 1400px;
+	border: 1px solid #4098d8;
+	font-family: Montserrat;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 29.26px;
+	letter-spacing: 0%;
+	text-align: center;
+	border-radius: 30px;
+	position: relative;
+
+	.logoBg {
+		left: 50%;
+		top: 60%;
+		transform: translate(-50%, -50%);
+		position: absolute;
+	}
+}
+
+.tableFirstRow {
+	display: flex;
+	font-family: Montserrat;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 29.26px;
+	letter-spacing: 0%;
+	text-align: center;
+	color: #ffffff;
+
+	.tableRowItem {
+		flex: 1;
+		text-align: center;
+		background-color: #35c0ff;
+		&:first-child {
+			border-top-left-radius: 30px;
+		}
+		&:last-child {
+			border-top-right-radius: 30px;
+		}
+		&:not(:last-child) {
+			border-right: 1px solid #4098d8;
+			border-bottom: 1px solid #4098d8;
+		}
+		&:last-child {
+			border-bottom: 1px solid #4098d8;
+		}
+		.tableRowItemInner {
+			display: flex;
+			flex: 1;
+			&:last-child {
+				border-top: 1px solid #4098d8;
+			}
+
+			.tableRowItemInnerItem {
+				border-right: 1px solid #4098d8;
+			}
+		}
+	}
+
+	.tableRowItemVertical {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.tableRowItemCenter {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex: 1;
+	}
+
+	.tableRowItemFirstRow {
+		height: 150px;
+	}
+}
+
+.tableSecondRow {
+	display: flex;
+	height: 216px;
+
+	color: #5a5a5a;
+	font-family: Montserrat;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 29.26px;
+	letter-spacing: 0%;
+	text-align: center;
+
+	.tableRowItem {
+		flex: 1;
+		&:last-child {
+			.tableRowItemInner {
+				&:last-child {
+					border-right: unset;
+				}
+			}
+		}
+
+		.tableRowItemInner {
+			flex: 1;
+			border-right: 1px solid #4098d8;
+			border-bottom: 1px solid #4098d8;
+			&:last-child {
+				border-bottom: unset;
+			}
+		}
+
+		.tableRowItemInnerFirstColumn {
+			flex: 2;
+		}
+	}
+
+	.tableRowItemSecond {
+		.tableRowItemInner {
+			border-bottom: unset;
+		}
+	}
+
+	.tableRowItemThird {
+		.tableRowItemInner {
+			border-bottom: unset;
+		}
+	}
+
+	.tableRowItemInnerItem {
+		width: 100%;
+		&:not(:last-child) {
+			border-bottom: 1px solid #4098d8;
+		}
+	}
+
+	.tableRowItemHorizontal {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.tableRowItemVertical {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.tableRowItemInner {
+		flex: 1;
+	}
+
+	.tableRowItemCenter {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex: 1;
+	}
+}
+
+.myTitle {
+	font-family: Montserrat;
+	font-weight: 600;
+	font-style: italic;
+	font-size: 18px;
+	line-height: 29.26px;
+	letter-spacing: 0%;
+	text-align: center;
+	color: #4098d8;
+	margin-top: 10px;
+	padding: 0 30px;
+}
+
+.switchWrap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: Montserrat;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 19.5px;
+	letter-spacing: 0%;
+	text-align: center;
+	margin-top: 20px;
+	color: #5a5a5a;
+	cursor: pointer;
+
+	.arrowImg {
+		width: 26px;
+		height: 26px;
+		margin-left: 10px;
+	}
+}
+
+.decribleText {
+	margin: 20px auto;
+	width: 1400px;
+	font-family: Montserrat;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 20px;
+	letter-spacing: 0%;
+	color: #5a5a5a;
+
+	.itemWrap {
+		display: flex;
+		margin-bottom: 10px;
+		.leftIcon {
+			width: 10px;
+			height: 10px;
+			border-radius: 10px;
+			background-color: #5a5a5a;
+			margin-top: 10px;
+		}
+		.leftNumber {
+			width: 10px;
+			height: 10px;
+			margin-right: 5px;
+		}
+		.rightTitle {
+			flex: 1;
+			margin-left: 10px;
+		}
+	}
+
+	.itemWrapLeftPadding {
+		padding-left: 50px;
+	}
+
+	.textColor {
+		color: #4098d8;
+	}
+}
+
+.itemWrapFix {
+	margin-bottom: 10px;
+}
+
+.title2Img {
+	width: 466px;
+	height: auto;
+	margin: 30px auto;
+}
+
+.title3Img {
+	width: 1140px;
+	height: auto;
+	margin: 30px auto;
+}
+
+.title4Img {
+	width: 465px;
+	height: auto;
+	margin: 30px auto 0;
+}
+
+.cardImg {
+	margin: 50px auto;
+	width: 1596px;
+	height: 788px;
+}

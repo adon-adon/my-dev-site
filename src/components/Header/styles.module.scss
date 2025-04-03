@@ -1,0 +1,107 @@
+.content {
+	padding-bottom: 3px;
+	background-color: #e6f3ff;
+}
+
+.userControlWrap {
+	background-color: white;
+}
+
+.userControl {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 1562px;
+	margin: 0 auto;
+	height: 90px;
+
+	.leftTitle {
+		font-family: Montserrat;
+		font-weight: 500;
+		font-size: 21px;
+		line-height: 25.6px;
+		letter-spacing: 0%;
+		color: #4098d8;
+	}
+
+	.rightControl {
+		display: flex;
+		align-items: center;
+		.button {
+			height: 40px;
+			line-height: 40px;
+			margin-left: 15px;
+			border-radius: 29px;
+			padding-left: 25px;
+			padding-right: 25px;
+			font-size: 16px;
+			font-weight: 600;
+			text-align: center;
+			background: linear-gradient(0deg, #2ccc59 -14.06%, #89e810 148.44%);
+			box-shadow: 13px 4px 30px 0px rgba(40, 238, 155, 1) inset, -7px 4px 8px 0px rgba(215, 250, 255, 0.55) inset;
+			color: #fff;
+			cursor: pointer;
+
+			&.buttonBlue {
+				background: linear-gradient(0deg, #02b7f0 -14.06%, #8cc4f8 148.44%);
+				box-shadow: 18px 4px 30px 0px rgba(186, 252, 248, 0.75) inset, -7px 4px 8px 0px rgba(215, 250, 255, 0.55) inset;
+			}
+		}
+	}
+}
+
+.navControl {
+	height: 79px;
+
+	.realContent {
+		width: 1562px;
+		height: 100%;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+
+		.mainLogo {
+			width: 239px;
+			height: 69px;
+			cursor: pointer;
+		}
+
+		.navLists {
+			display: flex;
+			align-items: center;
+			margin-left: 60px;
+			height: 79px;
+			.navItem {
+				position: relative;
+				height: 100%;
+				font-family: Montserrat;
+				font-weight: 700;
+				font-size: 18px;
+				line-height: 21.94px;
+				letter-spacing: 0%;
+				margin: 0 20px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				cursor: pointer;
+				&.active,
+				&:hover {
+					color: #4098d8;
+					&::after {
+						position: absolute;
+						content: "";
+						top: 78px;
+						left: 50%;
+						transform: translateX(-50%);
+						width: 100%;
+						height: 3px;
+						background-color: #4098d8;
+					}
+				}
+				&.normal {
+					color: #6c7aab;
+				}
+			}
+		}
+	}
+}
