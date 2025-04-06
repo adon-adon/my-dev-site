@@ -21,7 +21,6 @@ import { z } from 'zod'
 import { apiPost } from '@/utils/axiosInstance'
 
 import { check } from '@/utils/validator'
-import { getBaseApiUrl } from '@/utils'
 
 import styles from './issueForm.module.scss'
 
@@ -93,7 +92,7 @@ export default function IssueForm() {
     }
 
     const response = await apiPost(
-      `${getBaseApiUrl()}/member/member/feedback`,
+      `/member/member/feedback`,
       data
     )
 

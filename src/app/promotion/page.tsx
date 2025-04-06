@@ -9,6 +9,7 @@ import Banner from '@/components/Banner'
 import Layout from '@/components/Layout'
 import WrapMask from '@/components/WrapMask'
 import { getS3File } from '@/utils'
+import { fetchBannerList } from '@/utils/service'
 
 import banner1 from '@/assets/images/promotion/banner1.webp'
 
@@ -75,34 +76,53 @@ export default function Promotion() {
     queryFn: () => fetchList(page),
   })
 
+  const { data: bannerData } = useQuery({
+    queryKey: ['/banner-lists-promotion'],
+    queryFn: () =>
+      fetchBannerList({
+        bannerType: 2,
+        deviceType: 2,
+        page: 1,
+        size: 10,
+        type: 2,
+      }),
+  })
+
+  const list = (bannerData?.list || []).map((item) => {
+    return `${getS3File()}${item.bannerUrl}`
+  })
+
   return (
     <Layout>
       <div className={styles.container}>
-        <Banner list={[banner1]} />
+        <Banner list={list} />
 
         <WrapMask>
-          <div className={styles.listGroup}>
-            {!!data &&
-              data.list.map((item) => {
-                return (
-                  <div
-                    className={styles.cardItem}
-                    key={item.id}
-                    onClick={() => router.push(`/promotion/${item.id}`)}
-                  >
-                    <div className={styles.cardItemImgWrap}>
-                      <Image
-                        className={styles.cardItemImg}
-                        src={`${getS3File()}${item.image}`}
-                        alt=""
-                        fill
-                      />
+          <div className={styles.listGroupWrap}>
+            <div className={styles.listGroup}>
+              {!!data &&
+                data.list.map((item) => {
+                  return (
+                    <div
+                      className={styles.cardItem}
+                      key={item.id}
+                      onClick={() => router.push(`/promotion/${item.id}`)}
+                    >
+                      <div className={styles.cardItemImgWrap}>
+                        <Image
+                          className={styles.cardItemImg}
+                          src={`${getS3File()}${item.image}`}
+                          alt=""
+                          fill
+                        />
+                      </div>
+                      <div className={styles.cardItemTitle}>{item.name}</div>
                     </div>
-                    <div className={styles.cardItemTitle}>{item.name}</div>
-                  </div>
-                )
-              })}
+                  )
+                })}
+            </div>
           </div>
+
           <div className={styles.paginationBox}>
             <Stack spacing={2}>
               <Pagination

@@ -6,14 +6,17 @@
   z-index: 2;
 }
 
+.listGroupWrap {
+  min-height: 600px;
+}
+
 .listGroup {
   width: 1223px;
-  margin: 30px auto;
   display: grid;
+  margin: 30px auto;
   grid-template-columns: repeat(2, 1fr);
   row-gap: 20px;
   column-gap: 20px;
-  min-height: 800px;
 
   .cardItem {
     border-bottom-left-radius: 8px;

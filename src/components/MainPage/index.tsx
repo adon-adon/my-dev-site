@@ -1,6 +1,5 @@
-// "use client";
+'use client'
 import Image from 'next/image'
-import WrapMask from '../WrapMask'
 import Layout from '@/components/Layout'
 import Banner from '@/components/Banner'
 import SwiperCustom from '@/components/Swiper'
@@ -20,16 +19,34 @@ import littleCard4 from '@/assets/images/main/littleCard4.webp'
 import littleCard5 from '@/assets/images/main/littleCard5.webp'
 import littleCard6 from '@/assets/images/main/littleCard6.webp'
 import bottomImg from '@/assets/images/main/bottomImg.webp'
-import banner1 from '@/assets/images/main/banner1.webp'
 
 import UserAction from './UserAction'
 import styles from './styles.module.scss'
+import { useQuery } from '@tanstack/react-query'
+import { getS3File } from '@/utils'
+import { fetchBannerList } from '@/utils/service'
 
 export default function MainPage() {
+  const { data } = useQuery({
+    queryKey: ['/banner-lists-main'],
+    queryFn: () =>
+      fetchBannerList({
+        bannerType: 1,
+        deviceType: 2,
+        page: 1,
+        size: 10,
+        type: 2,
+      }),
+  })
+
+  const list = (data?.list || []).map((item) => {
+    return `${getS3File()}${item.bannerUrl}`
+  })
+
   return (
     <Layout>
       <div className={styles.container}>
-        <Banner list={[banner1]} />
+        <Banner list={list} />
 
         <div className={styles.largeBg}>
           <div className={styles.cardContent}>

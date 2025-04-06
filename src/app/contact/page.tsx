@@ -40,7 +40,9 @@ const LinkList: LinkItem[] = [
 async function fetchList(): Promise<LinkItem[]> {
   const response = await apiPost<LinkItem[]>(
     '/member/member/front/contactConfig/list',
-    {}
+    {
+      type: 2,
+    }
   )
   return response.data
 }
@@ -81,7 +83,7 @@ export default function Contact() {
                       <div className={styles.contactItem}>
                         {item.svg}
                         <div className={styles.contactItemContent}>
-                          {item.name.toUpperCase()}: {item.textName}
+                          {capitalizeFirstLetter(item.name)}: {item.textName}
                         </div>
                       </div>
                     </a>
@@ -95,3 +97,6 @@ export default function Contact() {
     </Layout>
   )
 }
+
+const capitalizeFirstLetter = (str: string) =>
+  str.charAt(0).toUpperCase() + str.slice(1)

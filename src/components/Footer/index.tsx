@@ -24,9 +24,10 @@ import GameLogo6 from '@/assets/images/common/gameLogo/game-logo-06.png'
 import GameLogo7 from '@/assets/images/common/gameLogo/game-logo-07.png'
 import GameLogo8 from '@/assets/images/common/gameLogo/game-logo-08.png'
 
-import styles from './styles.module.scss'
 import { useQuery } from '@tanstack/react-query'
 import { apiPost } from '@/utils/axiosInstance'
+
+import styles from './styles.module.scss'
 
 const LinkList: LinkItem[] = [
   {
@@ -41,11 +42,10 @@ const LinkList: LinkItem[] = [
   },
 ]
 
-
 type LinkItem = {
-	name: string
-	svg: JSX.Element
-	link: string
+  name: string
+  svg: JSX.Element
+  link: string
 }
 
 const gameLogos = [
@@ -62,21 +62,25 @@ const gameLogos = [
 async function fetchList(): Promise<LinkItem[]> {
   const response = await apiPost<LinkItem[]>(
     `/member/member/front/contactConfig/list`,
-    {}
+    {
+      type: 2,
+    }
   )
   return response.data
 }
 
 export default function Footer() {
-	const { data } = useQuery({
+  const { data } = useQuery({
     queryKey: ['/LinkLists'],
     queryFn: () => fetchList(),
   })
 
-	const linkLists = LinkList.map((item) => {
-		const curItem = data ? data .find((curItem) => curItem.name == item.name) : []
-		return { ...item, ...curItem }
-	})
+  const linkLists = LinkList.map((item) => {
+    const curItem = data
+      ? data.find((curItem) => curItem.name == item.name)
+      : []
+    return { ...item, ...curItem }
+  })
 
   return (
     <footer className={styles.footer}>

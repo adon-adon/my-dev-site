@@ -2,11 +2,9 @@ import axios, { AxiosRequestConfig, AxiosResponse } from 'axios'
 
 // 获取当前环境的 baseURL
 const isServer = typeof window === 'undefined'
-// const baseURL = isServer
-//   ? process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000' // 服务器端
-//   : window.location.origin // 客户端
-
-const baseURL = 'https://agent-official-h5.7f5h2k9l.com'
+const baseURL = isServer
+  ? process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000' // 服务器端
+  : process.env.NEXT_PUBLIC_API_URL // 客户端
 
 // 创建 Axios 实例
 const api = axios.create({

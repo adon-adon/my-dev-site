@@ -68,7 +68,9 @@ const Customer: FC<customerProps> = ({ top, showLogin }: customerProps) => {
   const getList = async () => {
     const response = await apiPost<LinkItem[]>(
       '/member/member/front/contactConfig/list',
-      {}
+      {
+        type: 2
+      }
     )
 
     if (response.code === 0) {
